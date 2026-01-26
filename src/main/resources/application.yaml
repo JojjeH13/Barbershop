@@ -3,9 +3,9 @@ spring:
     name: Barbershop
 
   datasource:
-    url: jdbc:mysql://localhost:3306/barbershopdb
-    username: appuser
-    password: apppassword
+    url: jdbc:mysql://localhost:3307/barbershopdb
+    username: root
+    password: password
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
