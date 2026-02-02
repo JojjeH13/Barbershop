@@ -14,8 +14,9 @@ public class BookingController {
     private final BookingRepository repo;
 
     public BookingController(BookingRepository repo) {
-
+        this.repo = repo;
     }
+
     @PostMapping
     public Booking create(@RequestBody Booking booking) {
         return repo.save(booking);
