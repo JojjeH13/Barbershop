@@ -6,8 +6,7 @@ import java.util.List;
 
 public class BookingRepository {
     public Booking save(Booking booking) {
-
-        return booking;
+    return booking;
     }
 
     public List<Booking> findAll() {
