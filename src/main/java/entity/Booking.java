@@ -1,5 +1,6 @@
 package entity;
 
+import enums.Status;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -26,6 +27,62 @@ public class Booking {
     private LocalTime bookingTime;
 
     @Enumerated(EnumType.STRING)
-    private Enum.Status status;
+    private Status status;
+
+    public Long getBookingid() {
+        return bookingid;
+    }
+
+    public void setBookingid(Long bookingid) {
+        this.bookingid = bookingid;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public LocalDate getBookingDate() {
+        return bookingDate;
+    }
+
+    public void setBookingDate(LocalDate bookingDate) {
+        this.bookingDate = bookingDate;
+    }
+
+    public LocalTime getBookingTime() {
+        return bookingTime;
+    }
+
+    public void setBookingTime(LocalTime bookingTime) {
+        this.bookingTime = bookingTime;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 
 }

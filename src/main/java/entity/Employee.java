@@ -23,4 +23,11 @@ public class Employee {
         this.employeeid = employeeid;
     }
 
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
+    }
 }
