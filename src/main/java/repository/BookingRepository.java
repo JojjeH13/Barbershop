@@ -1,15 +1,10 @@
 package repository;
 
 import entity.Booking;
+import entity.Customer;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public class BookingRepository {
-    public Booking save(Booking booking) {
-    return booking;
-    }
-
-    public List<Booking> findAll() {
-        return null;
-    }
+public interface BookingRepository extends JpaRepository<Booking, Long> {
 }

@@ -12,8 +12,7 @@ public class BookingController {
 
     private final BookingRepository repo;
 
-    public BookingController(BookingRepository repo, BookingRepository repo1) {
-
+    public BookingController(BookingRepository repo) {
         this.repo = repo;
     }
     @PostMapping
@@ -21,7 +20,7 @@ public class BookingController {
         return repo.save(booking);
     }
 
-    @GetMapping
+    @GetMapping("/api/bookings")
     public List<Booking> getAll(){
         return repo.findAll();
     }
