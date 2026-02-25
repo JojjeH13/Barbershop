@@ -1,4 +1,4 @@
-package entity;
+package com.example.barbershop.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,15 +6,16 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Customer {
+public class Product {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
-    private String mail;
-    private int phone;
+    private int price;
+    private int duration;  //Duration in minutes
 
     public Long getId() {
         return id;
@@ -32,21 +33,19 @@ public class Customer {
         this.name = name;
     }
 
-    public String getMail() {
-        return mail;
+    public int getPrice() {
+        return price;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
-
-    public int getPhone() {
-        return phone;
+    public int getDuration() {
+        return duration;
     }
 
-    public void setPhone(int phone) {
-        this.phone = phone;
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
-
 }

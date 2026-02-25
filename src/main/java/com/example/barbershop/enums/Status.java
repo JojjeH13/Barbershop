@@ -1,4 +1,4 @@
-package enums;
+package com.example.barbershop.enums;
 
 public enum Status {
     BOKAD,

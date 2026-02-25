@@ -1,10 +1,7 @@
-package repository;
+package com.example.barbershop.repository;
 
-import entity.Booking;
-import entity.Customer;
+import com.example.barbershop.entity.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
 
 public interface BookingRepository extends JpaRepository<Booking, Long> {
 }

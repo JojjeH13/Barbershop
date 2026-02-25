@@ -1,4 +1,4 @@
-package entity;
+package com.example.barbershop.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Product {
+public class Employee {
 
 
     @Id
@@ -14,8 +14,6 @@ public class Product {
     private Long id;
 
     private String name;
-    private int price;
-    private int duration;  //Duration in minutes
 
     public Long getId() {
         return id;
@@ -31,21 +29,5 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
-
-    public void setDuration(int duration) {
-        this.duration = duration;
     }
 }

@@ -1,6 +1,6 @@
-package entity;
+package com.example.barbershop.entity;
 
-import enums.Status;
+import com.example.barbershop.enums.Status;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;

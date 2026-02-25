@@ -1,11 +1,13 @@
-package service;
+package com.example.barbershop.service;
 
-import entity.Booking;
-import repository.BookingRepository;
+import com.example.barbershop.entity.Booking;
+import com.example.barbershop.repository.BookingRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class BookingService {
     private final BookingRepository repository;
 
