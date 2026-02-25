@@ -10,43 +10,43 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long customerid;
+    private Long id;
 
-    private String customerName;
-    private String customerMail;
-    private int customerPhone;
+    private String name;
+    private String mail;
+    private int phone;
 
-    public Long getCustomerid() {
-        return customerid;
+    public Long getId() {
+        return id;
     }
 
-    public void setCustomerid(Long customerid) {
-        this.customerid = customerid;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getCustomerName() {
-        return customerName;
+    public String getName() {
+        return name;
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getCustomerMail() {
-        return customerMail;
+    public String getMail() {
+        return mail;
     }
 
-    public void setCustomerMail(String customerMail) {
-        this.customerMail = customerMail;
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 
 
-    public int getCustomerPhone() {
-        return customerPhone;
+    public int getPhone() {
+        return phone;
     }
 
-    public void setCustomerPhone(int customerPhone) {
-        this.customerPhone = customerPhone;
+    public void setPhone(int phone) {
+        this.phone = phone;
     }
 
 }

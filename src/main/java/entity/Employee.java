@@ -11,23 +11,23 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long employeeid;
+    private Long id;
 
-    private String employeeName;
+    private String name;
 
-    public Long getEmployeeid() {
-        return employeeid;
+    public Long getId() {
+        return id;
     }
 
-    public void setEmployeeid(Long employeeid) {
-        this.employeeid = employeeid;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getEmployeeName() {
-        return employeeName;
+    public String getName() {
+        return name;
     }
 
-    public void setEmployeeName(String employeeName) {
-        this.employeeName = employeeName;
+    public void setName(String name) {
+        this.name = name;
     }
 }

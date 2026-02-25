@@ -12,7 +12,7 @@ public class Booking {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long bookingid;
+    private Long id;
 
     @ManyToOne
     private Customer customer;
@@ -29,12 +29,12 @@ public class Booking {
     @Enumerated(EnumType.STRING)
     private Status status;
 
-    public Long getBookingid() {
-        return bookingid;
+    public Long getId() {
+        return id;
     }
 
-    public void setBookingid(Long bookingid) {
-        this.bookingid = bookingid;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Customer getCustomer() {

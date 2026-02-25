@@ -11,34 +11,34 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long productid;
+    private Long id;
 
-    private String productName;
-    private int productPrice;
+    private String name;
+    private int price;
     private int duration;  //Duration in minutes
 
-    public Long getProductid() {
-        return productid;
+    public Long getId() {
+        return id;
     }
 
-    public void setProductid(Long productid) {
-        this.productid = productid;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getName() {
+        return name;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getProductPrice() {
-        return productPrice;
+    public int getPrice() {
+        return price;
     }
 
-    public void setProductPrice(int productPrice) {
-        this.productPrice = productPrice;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public int getDuration() {
