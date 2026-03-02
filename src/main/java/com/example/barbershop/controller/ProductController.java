@@ -1,4 +1,4 @@
 package com.example.barbershop.controller;
 
-public class ServiceController {
+public class ProductController {
 }

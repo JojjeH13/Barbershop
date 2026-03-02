@@ -14,7 +14,7 @@ public class Customer {
 
     private String name;
     private String mail;
-    private int phone;
+    private String phone;
 
     public Long getId() {
         return id;
@@ -41,11 +41,11 @@ public class Customer {
     }
 
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

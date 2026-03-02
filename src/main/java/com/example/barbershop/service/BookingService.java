@@ -55,7 +55,7 @@ public class BookingService {
 
         List<LocalTime> availableSlots = new ArrayList<>();
 
-        for (int hour = 9; hour < 17; hour++) {
+        for (int hour = 10; hour < 19; hour++) {
             LocalTime time = LocalTime.of(hour, 0);
 
             boolean isBooked = bookingsForDay.stream()
