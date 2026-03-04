@@ -22,6 +22,8 @@ public class BookingService {
         return repository.save(booking);
     }
 
+
+
     public List<Booking> getBookings() {
         return repository.findAll();
     }

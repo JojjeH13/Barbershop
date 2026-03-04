@@ -19,6 +19,7 @@ public class BookingController {
     public String health() {
         return "ok";
     }
+
     @PostMapping
     public Booking create(@RequestBody Booking booking) {
        return bookingService.createBooking(booking);

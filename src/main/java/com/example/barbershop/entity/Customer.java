@@ -49,4 +49,7 @@ public class Customer {
         this.phone = phone;
     }
 
+    public Customer orElseThrow(Object customerNotFound) {
+        return null;
+    }
 }
