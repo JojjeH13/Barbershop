@@ -24,7 +24,7 @@ public class CustomerController {
     @GetMapping("/{id}")
     public Customer getCustomerById(@PathVariable Long id) {
         Customer customerNotFound = customerService.getCustomerById(id)
-                .orElseThrow(new RuntimeException("Customer not found"));
+                .orElseThrow(new RuntimeException("Kund med id: " + id + "finns inte. "));
                 return customerNotFound;
     }
 
