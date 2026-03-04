@@ -1,5 +1,6 @@
 package com.example.barbershop.controller;
 
+import com.example.barbershop.dto.BookingDTO;
 import com.example.barbershop.entity.Booking;
 import org.springframework.web.bind.annotation.*;
 import com.example.barbershop.service.BookingService;
@@ -29,5 +30,9 @@ public class BookingController {
     @GetMapping
     public List<Booking> getAll(){
        return bookingService.getBookings();
+    }
+    @GetMapping("/{id}")
+    public BookingDTO getBookingDTOById(@PathVariable Long id){
+        return bookingService.getBookingDTOById(id);
     }
 }

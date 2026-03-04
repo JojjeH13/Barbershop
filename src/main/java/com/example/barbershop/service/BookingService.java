@@ -1,5 +1,6 @@
 package com.example.barbershop.service;
 
+import com.example.barbershop.dto.BookingDTO;
 import com.example.barbershop.entity.Booking;
 import com.example.barbershop.repository.BookingRepository;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,13 @@ public class BookingService {
     public Booking getBookingById(Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Bookning med id: " + id + " finns inte. "));
+    }
+    public BookingDTO getBookingDTOById(Long id) {
+        Booking booking = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Bookning med id: " + id + " finns inte. "));
+        return new BookingDTO(booking.getEmployee().getName(),
+                booking.getProduct().getName(),
+                booking.getCustomer().getName());
     }
 
     public Booking cancelBooking(Long id) {
