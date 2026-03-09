@@ -1,6 +1,5 @@
 package com.example.barbershop.controller;
 
-import com.example.barbershop.entity.Customer;
 import com.example.barbershop.entity.Product;
 import com.example.barbershop.service.ProductService;
 import org.springframework.web.bind.annotation.*;
