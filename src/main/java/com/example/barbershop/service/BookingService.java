@@ -24,7 +24,6 @@ public class BookingService {
     }
 
 
-
     public List<Booking> getBookings() {
         return repository.findAll();
     }
@@ -33,6 +32,7 @@ public class BookingService {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Bookning med id: " + id + " finns inte. "));
     }
+
     public BookingDTO getBookingDTOById(Long id) {
         Booking booking = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Bookning med id: " + id + " finns inte. "));
@@ -58,23 +58,5 @@ public class BookingService {
         return repository.save(booking);
     }
 
-    public List<LocalTime> findAvailableSlots(LocalDate date) {
 
-        List<Booking> bookingsForDay =
-                repository.findByBookingDateAndStatusNot(date, Status.AVBOKAD);
-
-        List<LocalTime> availableSlots = new ArrayList<>();
-
-        for (int hour = 10; hour < 19; hour++) {
-            LocalTime time = LocalTime.of(hour, 0);
-
-            boolean isBooked = bookingsForDay.stream()
-                    .anyMatch(b -> b.getBookingTime().equals(time));
-
-            if (!isBooked) {
-                availableSlots.add(time);
-            }
-        }
-        return availableSlots;
-    }
 }

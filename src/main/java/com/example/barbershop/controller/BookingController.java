@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/bookings")
+@CrossOrigin(origins = "http://localhost:3000")
 public class BookingController {
 
     private final BookingService bookingService;
@@ -23,6 +24,7 @@ public class BookingController {
 
     @PostMapping
     public Booking create(@RequestBody Booking booking) {
+        System.out.println("booking" + booking.getBookingDate());
        return bookingService.createBooking(booking);
     }
 
