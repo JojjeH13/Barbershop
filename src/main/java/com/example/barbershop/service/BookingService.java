@@ -7,7 +7,6 @@ import com.example.barbershop.entity.Employee;
 import com.example.barbershop.entity.Product;
 import com.example.barbershop.repository.BookingRepository;
 import org.springframework.stereotype.Service;
-import com.example.barbershop.enums.Status;
 
 import java.util.List;
 
