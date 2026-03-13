@@ -50,10 +50,6 @@ public class BookingService {
         return repository.findAll();
     }
 
-    public Booking getBookingById(Long id) {
-        return repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Bookning med id: " + id + " finns inte. "));
-    }
     public BookingDTO getBookingDTOById(Long id) {
         Booking booking = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Bookning med id: " + id + " finns inte. "));
@@ -70,7 +66,7 @@ public class BookingService {
         );
     }
 
-    public Booking cancelBooking(Long id) {
+    /*public Booking cancelBooking(Long id) {
         Booking booking = getBookingById(id);
         booking.setStatus(Status.AVBOKAD);
         return repository.save(booking);
@@ -87,7 +83,7 @@ public class BookingService {
         booking.setStatus(Status.KLAR);
 
         return repository.save(booking);
-    }
+    }*/
 
 
 }
