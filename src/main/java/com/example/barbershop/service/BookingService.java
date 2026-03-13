@@ -3,6 +3,7 @@ package com.example.barbershop.service;
 import com.example.barbershop.dto.BookingDTO;
 import com.example.barbershop.entity.Booking;
 import com.example.barbershop.entity.Customer;
+import com.example.barbershop.entity.Employee;
 import com.example.barbershop.entity.Product;
 import com.example.barbershop.repository.BookingRepository;
 import org.springframework.stereotype.Service;
@@ -22,18 +23,24 @@ public class BookingService {
 
         Booking booking = new Booking();
         Customer customer = new Customer();
+        Employee employee = new Employee();
+        Product product = new Product();
+
+        booking.setBookingDate(bookingdto.getBookingDate());
+        booking.setBookingTime(bookingdto.getBookingTime());
+        booking.setPrice(bookingdto.getPrice());
 
         customer.setCustomerName(bookingdto.getCustomerName());
         customer.setCustomerMail(bookingdto.getCustomerMail());
         customer.setCustomerPhone(bookingdto.getCustomerPhone());
 
-        booking.setEmployee(bookingdto.getEmployeeName());
-        booking.setProduct(bookingdto.getProductName());
-        booking.setBookingDate(bookingdto.getBookingDate());
-        booking.setBookingTime(bookingdto.getBookingTime());
-        booking.setPrice(bookingdto.getPrice());
+        employee.setEmployeeName(bookingdto.getEmployeeName());
+
+        product.setProductName(bookingdto.getProductName());
 
         booking.setCustomer(customer);
+        booking.setEmployee(employee);
+        booking.setProduct(product);
 
         return repository.save(booking);
     }
@@ -47,7 +54,6 @@ public class BookingService {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Bookning med id: " + id + " finns inte. "));
     }
-
     public BookingDTO getBookingDTOById(Long id) {
         Booking booking = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Bookning med id: " + id + " finns inte. "));
@@ -63,6 +69,7 @@ public class BookingService {
                 booking.getPrice()
         );
     }
+
     public Booking cancelBooking(Long id) {
         Booking booking = getBookingById(id);
         booking.setStatus(Status.AVBOKAD);
@@ -84,3 +91,4 @@ public class BookingService {
 
 
 }
+

@@ -27,8 +27,6 @@ public class BookingDTO {
         this.customerMail = customerMail;
     }
 
-    public BookingDTO() {
-    }
 
     public String getEmployeeName() {
         return employeeName;

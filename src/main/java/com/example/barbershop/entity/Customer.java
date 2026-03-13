@@ -24,22 +24,6 @@ public class Customer {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getMail() {
-        return mail;
-    }
-
-    public void setMail(String mail) {
-        this.mail = mail;
-    }
-
 
     public String getPhone() {
         return phone;
@@ -68,5 +52,9 @@ public class Customer {
 
     public int getCustomerPhone() {
         return 0;
+    }
+
+    public String getName() {
+        return name;
     }
 }

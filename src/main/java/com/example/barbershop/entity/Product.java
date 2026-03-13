@@ -15,7 +15,7 @@ public class Product {
 
     private String name;
     private int price;
-    private int duration;  //Duration in minutes
+    private int duration;
 
     public Long getId() {
         return id;
@@ -23,14 +23,6 @@ public class Product {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getPrice() {
@@ -47,5 +39,12 @@ public class Product {
 
     public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    public void setProductName(String productName) {
+    }
+
+    public String getName() {
+        return name;
     }
 }
