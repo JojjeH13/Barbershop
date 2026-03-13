@@ -28,7 +28,7 @@ public class CustomerService {
                 .orElseThrow(() -> new RuntimeException("Kund med id " + id + " finns inte"));
     }
 
-    public Customer updateCustomer(Long id, Customer updatedCustomer) {
+    /*public Customer updateCustomer(Long id, Customer updatedCustomer) {
 
         Customer existingCustomer = getCustomerById(id);
 
@@ -37,7 +37,7 @@ public class CustomerService {
         existingCustomer.setPhone(updatedCustomer.getPhone());
 
         return repository.save(existingCustomer);
-    }
+    }*/
 
     public void deleteCustomer(Long id) {
         repository.deleteById(id);
