@@ -23,9 +23,9 @@ public class BookingController {
     }
 
     @PostMapping
-    public Booking create(@RequestBody Booking booking) {
-        System.out.println("booking" + booking.getBookingDate());
-       return bookingService.createBooking(booking);
+    public Booking create(@RequestBody BookingDTO bookingdto) {
+        System.out.println("booking" + bookingdto.getBookingDate());
+        return bookingService.createBooking(bookingdto);
     }
 
 

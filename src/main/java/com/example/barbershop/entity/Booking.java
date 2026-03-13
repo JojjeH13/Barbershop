@@ -85,4 +85,11 @@ public class Booking {
         this.status = status;
     }
 
+    public void setPrice(int price) {
+    }
+
+    public int getPrice() {
+        return 0;
+    }
+
 }

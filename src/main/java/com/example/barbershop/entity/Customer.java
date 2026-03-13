@@ -52,4 +52,21 @@ public class Customer {
     public Customer orElseThrow(Object customerNotFound) {
         return null;
     }
+
+    public void setCustomerPhone(int customerPhone) {
+    }
+
+    public void setCustomerMail(String customerMail) {
+    }
+
+    public void setCustomerName(String customerName) {
+    }
+
+    public String getCustomerMail() {
+        return "";
+    }
+
+    public int getCustomerPhone() {
+        return 0;
+    }
 }

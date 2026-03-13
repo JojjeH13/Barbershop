@@ -8,5 +8,4 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface BookingRepository extends JpaRepository<Booking, Long> {
-    List<Booking> findByBookingDateAndStatusNot(LocalDate date, Status status);
 }
