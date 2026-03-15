@@ -21,7 +21,7 @@ public class CustomerController {
         return customerService.getAllCustomers();
     }
 
-    @GetMapping("/{id}")
+    /*@GetMapping("/{id}")
     public Customer getCustomerById(@PathVariable Long id) {
         Customer customerNotFound = customerService.getCustomerById(id)
                 .orElseThrow(new RuntimeException("Kund med id: " + id + "finns inte. "));
@@ -33,7 +33,7 @@ public class CustomerController {
         return customerService.createCustomer(customer);
     }
 
-    @PutMapping("/{id}")
+    /*@PutMapping("/{id}")
     public Customer updateCustomer(@PathVariable Long id,
                                    @RequestBody Customer customer) {
         return customerService.updateCustomer(id, customer);
@@ -42,5 +42,6 @@ public class CustomerController {
     @DeleteMapping("/{id}")
     public void deleteCustomer(@PathVariable Long id) {
         customerService.deleteCustomer(id);
-    }
+    }*/
+
 }

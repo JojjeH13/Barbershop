@@ -41,10 +41,12 @@ public class Product {
         this.duration = duration;
     }
 
-    public void setProductName(String productName) {
+    public void setName(String productName) {
     }
 
     public String getName() {
         return name;
     }
+
+
 }

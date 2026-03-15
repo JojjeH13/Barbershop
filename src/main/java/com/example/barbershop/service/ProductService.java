@@ -29,7 +29,7 @@ public class ProductService {
                         new RuntimeException("Produkt med id " + id + " finns inte"));
     }
 
-    public Product updateProduct(Long id, Product updatedProduct) {
+    /*public Product updateProduct(Long id, Product updatedProduct) {
 
         Product existingProduct = getProductById(id);
 
@@ -42,5 +42,6 @@ public class ProductService {
 
     public void deleteProduct(Long id) {
         repository.deleteById(id);
-    }
+    }*/
+
 }

@@ -9,17 +9,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/bookings")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:5173")
 public class BookingController {
 
     private final BookingService bookingService;
 
     public BookingController(BookingService bookingService) {
         this.bookingService = bookingService;
-    }
-    @GetMapping("/health")
-    public String health() {
-        return "ok";
     }
 
     @PostMapping

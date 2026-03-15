@@ -24,11 +24,12 @@ public class Employee {
     }
 
 
-    public void setEmployeeName(String employeeName) {
+    public void setName(String employeeName) {
     }
 
 
     public String getName() {
         return name;
     }
+
 }

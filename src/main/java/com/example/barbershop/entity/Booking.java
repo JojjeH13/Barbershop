@@ -3,7 +3,6 @@ package com.example.barbershop.entity;
 import com.example.barbershop.enums.Status;
 import jakarta.persistence.*;
 
-import javax.crypto.ExemptionMechanism;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
